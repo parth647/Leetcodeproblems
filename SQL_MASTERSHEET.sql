@@ -15,3 +15,9 @@ DELETE P1 FROM PERSON AS P1,PERSON AS P2 WHERE P1.EMAIL = P2.EMAIL AND P1.ID>P2.
 
 1. self Join
 2. condition where date is greater than prev date by 1 (use dateadd function) and tempareture is greater than prev day
+
+
+# select the first time a player logged in
+# Write your MySQL query statement below
+
+SELECT PLAYER_ID,MIN(EVENT_DATE) AS 'first_login' from ACTIVITY group by player_id
